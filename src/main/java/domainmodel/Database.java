@@ -1,3 +1,5 @@
+package domainmodel;
+
 import java.util.ArrayList;
 
 public class Database {
@@ -16,10 +18,6 @@ public class Database {
     public void addSuperhero(String superheroName, String firstName, String lastName, String abilities, String creature) {
         Superhero superhero = new Superhero(superheroName, firstName, lastName, abilities, creature);
         superheroList.add(superhero);
-    }
-
-    public ArrayList<Superhero> getSuperheroList() {
-        return superheroList;
     }
 
     public ArrayList<Superhero> findSuperhero(String superheroName) {
