@@ -29,6 +29,8 @@ public class UserInterface {
 
         int menuNumber;
 
+        // når vores superheros skal gennems i en fil, vil det være en fordel med .csv, da det betyder at filen er komma opdelt - vi kan have alt i en fil
+        // i stedet for at lave filer til alle strings i superhero
         while (runProgram) {
             System.out.println("\nChoose your next step and enter a number:");
             System.out.println("1. Create");
@@ -160,6 +162,7 @@ public class UserInterface {
                             break;
 
                     }
+
             }
         }
     }
