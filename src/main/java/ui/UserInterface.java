@@ -1,5 +1,4 @@
 package ui;
-
 import domainmodel.Superhero;
 
 import java.util.ArrayList;
@@ -20,7 +19,6 @@ public class UserInterface {
 
     public void startProgram() {
         Controller controller = new Controller();
-        controller.getSuperheroList();
         Scanner keyboard = new Scanner(System.in);
 
         System.out.println("Welcome to the SUPERHERO UNIVERSE!");
@@ -29,12 +27,10 @@ public class UserInterface {
 
         int menuNumber;
 
-        // når vores superheros skal gennems i en fil, vil det være en fordel med .csv, da det betyder at filen er komma opdelt - vi kan have alt i en fil
-        // i stedet for at lave filer til alle strings i superhero
         while (runProgram) {
             System.out.println("\nChoose your next step and enter a number:");
             System.out.println("1. Create");
-            System.out.println("2. See complete list of superhero");
+            System.out.println("2. See complete list of superheroes");
             System.out.println("3. Search for superhero");
             System.out.println("4. Edit superhero");
             System.out.println("5. Delete superhero");
@@ -43,7 +39,7 @@ public class UserInterface {
             menuNumber = scanIntWithRetry();
 
             switch (menuNumber) {
-                //TODO Create
+                //TODO Create, virker
                 case 1:
                     System.out.println("Enter the superhero name: ");
                     String superheroName = keyboard.next();
@@ -68,19 +64,19 @@ public class UserInterface {
                     if (controller.getSuperheroList().isEmpty()) {
                         System.out.println("No superhero found");
                     } else {
-                        System.out.println("Complete list of superheroes:" + controller.getSuperheroList());
-                    /*for (Superhero superhero1 : superheroList) {
+                        System.out.println("Complete list of superheroes:");
+                    for (Superhero superhero1 : controller.getSuperheroList()) {
                         if (superhero1 != null)
                             System.out.println(BLUE_BOLD + " domainmodel.Superhero: " + superhero1.getSuperheroName() +
                                     "\u001B[0m" + "\n" +
                                     " Name: " + superhero1.getFirstName() + " " + superhero1.getLastName() + "\n" +
                                     " Abilities: " + superhero1.getAbilities() + "\n" +
                                     " Species: " + superhero1.getSpecies());
-                    }*/
+                    }
                 }
                         break;
 
-                        //TODO Search for Superheroes
+                        //TODO Search for Superheroes, virker
                         case 3:
                             controller.getSuperheroName();
                             System.out.println("Enter the superhero name");
@@ -89,11 +85,13 @@ public class UserInterface {
                             if (controller.findSuperheroesNames(controller.getSuperheroName()).isEmpty()) {
                                 System.out.println("This superhero does not exist in our library of superheroes.");
                             } else {
-                                System.out.println(controller.getSuperheroName());
+                                for (String name : result){
+                                    System.out.println(name);
+                                }
                             }
                             break;
 
-                        //TODO Edit Superheroes
+                        //TODO Edit Superheroes, virker
                         case 4:
                             System.out.println("Enter the name of the superhero you would like to edit:");
                             final String searchSHName = keyboard.nextLine();

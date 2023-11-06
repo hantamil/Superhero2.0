@@ -6,15 +6,14 @@ import domainmodel.Superhero;
 import java.util.ArrayList;
 
 public class Controller {
-    Database database = new Database();
-    Superhero superhero;
+    private Database database = new Database();
 
     public void addSuperhero(String superheroName, String firstName, String lastName, String abilities, String species) {
         database.addSuperhero(superheroName, firstName, lastName, abilities, species);
     }
 
     public ArrayList<Superhero> getSuperheroList() {
-        return database.superheroList;
+        return database.getAll();
     }
 
     public ArrayList<String> findSuperheroesNames(String superheroName) {
@@ -29,8 +28,6 @@ public class Controller {
         return database.findSuperhero(superheroName);
     }
 
-    public String getSuperheroName(){
-        return superhero.getSuperheroName();
-    }
+
 
 }

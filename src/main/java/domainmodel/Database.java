@@ -4,15 +4,12 @@ import java.util.ArrayList;
 
 public class Database {
     private int count = 0;
+    FileHandler fh = new FileHandler();
 
-    public ArrayList<Superhero> superheroList;
+    private ArrayList<Superhero> superheroList;
 
     public Database() {
-        this.superheroList = new ArrayList<>();
-
-        superheroList.add(new Superhero("Superman", "Clark", " Kent", "Flight", "Human"));
-        superheroList.add(new Superhero("Batman", "Bruce", " Wayne", "Strong", "Human"));
-        superheroList.add(new Superhero("Spiderman", "Peter", " Parker", "Web", "Human"));
+        this.superheroList = fh.loadData();
     }
 
     public void addSuperhero(String superheroName, String firstName, String lastName, String abilities, String creature) {
@@ -49,5 +46,9 @@ public class Database {
                 return;
             }
         }
+    }
+
+    public ArrayList<Superhero> getAll(){
+    return superheroList;
     }
 }
