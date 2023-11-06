@@ -1,6 +1,5 @@
 package ui;
 import domainmodel.Superhero;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.lang.String;
@@ -23,7 +22,6 @@ public class UserInterface {
 
         System.out.println("Welcome to the SUPERHERO UNIVERSE!");
         boolean runProgram = true;
-
 
         int menuNumber;
 
@@ -59,7 +57,7 @@ public class UserInterface {
                     controller.addSuperhero(superheroName, firstName, lastName, abilities, species);
                     break;
 
-                //TODO See complete list of Superheroes
+                //TODO See complete list of Superheroes, virker
                 case 2:
                     if (controller.getSuperheroList().isEmpty()) {
                         System.out.println("No superhero found");
@@ -67,7 +65,7 @@ public class UserInterface {
                         System.out.println("Complete list of superheroes:");
                     for (Superhero superhero1 : controller.getSuperheroList()) {
                         if (superhero1 != null)
-                            System.out.println(BLUE_BOLD + " domainmodel.Superhero: " + superhero1.getSuperheroName() +
+                            System.out.println(BLUE_BOLD + " Superhero: " + superhero1.getSuperheroName() +
                                     "\u001B[0m" + "\n" +
                                     " Name: " + superhero1.getFirstName() + " " + superhero1.getLastName() + "\n" +
                                     " Abilities: " + superhero1.getAbilities() + "\n" +
@@ -78,11 +76,12 @@ public class UserInterface {
 
                         //TODO Search for Superheroes, virker
                         case 3:
-                            controller.getSuperheroName();
                             System.out.println("Enter the superhero name");
-                            //final String superheroName = keyboard.next();
+                            superheroName = keyboard.next();
 
-                            if (controller.findSuperheroesNames(controller.getSuperheroName()).isEmpty()) {
+                            ArrayList<String> result = controller.findSuperheroesNames(superheroName);
+
+                            if (result.isEmpty()){
                                 System.out.println("This superhero does not exist in our library of superheroes.");
                             } else {
                                 for (String name : result){
@@ -139,20 +138,21 @@ public class UserInterface {
                                 System.out.println("No results match your search: " + searchSHName);
                             }
                             break;
-/*
+
                         //TODO Delete Superheroes
                         case 5:
                             System.out.println("Enter the superhero you want to delete: ");
-                            final String searchSHN = keyboard.nextLine();
-                            ArrayList<Superhero> searchSHN = controller.findSuperhero(searchSHName);
-                            if (!searchSHN.isEmpty()) {
+                            superheroName = keyboard.next();
+
+                            ArrayList<Superhero> superheroDelete = controller.findSuperhero(superheroName);
+                            if (superheroDelete.isEmpty()) {
                                 System.out.println("This superhero does not exits in our database");
-                                final String searchSHName = keyboard.nextLine();
-                   /* for (int superhero = 0; superhero < superheroName.size(); superhero++){
-                        System.out.println(superhero + 1 + ".\n" + superheroName.get(superhero));
-                    }
+
+                            } else {
+                                controller.deleteSuperhero(superheroName);
+                                System.out.println("The superhero " + superheroName + " have been deleted from your library.");
                             }
-                            break;*/
+                            break;
 
                         //TODO Afslutter program
                 case 9:

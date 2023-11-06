@@ -1,5 +1,7 @@
 package domainmodel;
 
+import datasource.FileHandler;
+
 import java.util.ArrayList;
 
 public class Database {
@@ -12,8 +14,8 @@ public class Database {
         this.superheroList = fh.loadData();
     }
 
-    public void addSuperhero(String superheroName, String firstName, String lastName, String abilities, String creature) {
-        Superhero superhero = new Superhero(superheroName, firstName, lastName, abilities, creature);
+    public void addSuperhero(String superheroName, String firstName, String lastName, String abilities, String species) {
+        Superhero superhero = new Superhero(superheroName, firstName, lastName, abilities, species);
         superheroList.add(superhero);
     }
 
