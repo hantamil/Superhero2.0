@@ -112,7 +112,7 @@ public class UserInterface {
 
                                 System.out.println("Edit the data and press ENTER. If the data does not require changes, then press ENTER.");
 
-                                System.out.println("domainmodel.Superhero Name: " + editSuperhero.getSuperheroName());
+                                System.out.println("Superhero Name: " + editSuperhero.getSuperheroName());
                                 String newSuperheroName = keyboard.nextLine();
                                 if (!newSuperheroName.isEmpty())
                                     editSuperhero.setSuperheroName(newSuperheroName);
@@ -155,6 +155,10 @@ public class UserInterface {
                                 System.out.println("The superhero " + superheroName + " have been deleted from your library.");
                             }
                             break;
+
+                case 6:
+                    System.out.println("Which attribute do you want to search for: ");
+
 
                         //TODO Afslutter program
                 case 9:
