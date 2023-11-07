@@ -15,7 +15,7 @@ class ControllerTest {
         superheroes = new Database();
         superheroes.addSuperhero("Superman", "Clark", " Kent", "Flight", "Human");
         superheroes.addSuperhero("Batman", "Bruce", " Wayne", "Strong", "Human");
-        superheroes.addSuperhero("Spiderman", "Peter", " Parker", "Web", "Human");
+        superheroes.addSuperhero("Spider-Man", "Peter", " Parker", "Web", "Human");
 
     }
 
