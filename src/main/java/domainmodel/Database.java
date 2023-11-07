@@ -3,15 +3,16 @@ package domainmodel;
 import datasource.FileHandler;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Database {
-    private int count = 0;
     FileHandler fh = new FileHandler();
 
     private ArrayList<Superhero> superheroList;
 
     public Database() {
         this.superheroList = fh.loadData();
+        Collections.sort(superheroList);
     }
 
     public void addSuperhero(String superheroName, String firstName, String lastName, String abilities, String species) {

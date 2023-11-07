@@ -1,6 +1,7 @@
 package ui;
 import domainmodel.Superhero;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import java.lang.String;
 
@@ -32,6 +33,7 @@ public class UserInterface {
             System.out.println("3. Search for superhero");
             System.out.println("4. Edit superhero");
             System.out.println("5. Delete superhero");
+            System.out.println("6. See complete list of superheroes sorted");
             System.out.println("9. Close");
 
             menuNumber = scanIntWithRetry();

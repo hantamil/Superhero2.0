@@ -1,6 +1,8 @@
 package domainmodel;
 
-public class Superhero {
+import java.util.Comparator;
+
+public class Superhero implements Comparable<Superhero> {
 
     private String superheroName;
     private String firstName;
@@ -54,5 +56,10 @@ public class Superhero {
 
     public void setSpecies(String species) {
         this.species = species;
+    }
+
+    @Override
+    public int compareTo(Superhero otherSuperheroName) {
+        return superheroName.compareTo(otherSuperheroName.superheroName);
     }
 }

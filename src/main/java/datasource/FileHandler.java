@@ -6,14 +6,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileHandler {
-    private final File file = new File("superhero.csv");
+    private final File file = new File("superhero.txt");
 
     public ArrayList<Superhero> loadData (){
         ArrayList<Superhero> superheroList = new ArrayList();
         Scanner sc = null;
         try {
             sc = new Scanner(file);
-            sc.nextLine();
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
