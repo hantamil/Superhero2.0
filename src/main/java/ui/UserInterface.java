@@ -158,15 +158,21 @@ public class UserInterface {
 
                 case 6:
                     System.out.println("Which attribute do you want to search for: ");
+                    String attributeSort = keyboard.nextLine();
 
+                    if (attributeSort.isEmpty()){
+                        System.out.println("Not a parameter.");
+                    }
+                    else {
+                        controller.getSortBy(attributeSort);
+                    }
+                    break;
 
                         //TODO Afslutter program
                 case 9:
                             System.out.println("We hope to see you again soon");
-                            break;
-
                     }
-
+            break;
             }
         }
     }
