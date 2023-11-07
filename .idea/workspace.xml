@@ -4,25 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" name="Changes" comment="refractoring + note ift filer">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" name="Changes" comment="User Story 11 + 12">
+      <change afterPath="$PROJECT_DIR$/src/main/java/domainmodel/ComparatorAbilities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domainmodel/ComparatorFirstName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domainmodel/ComparatorLastName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domainmodel/ComparatorSpecies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domainmodel/ComparatorSuperHeroName.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/FileHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domainmodel/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainmodel/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domainmodel/Superhero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainmodel/Superhero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superhero.csv" beforeDir="false" afterPath="$PROJECT_DIR$/superhero.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Controller.java" afterDir="false" />
     </list>
     <list id="8f282e03-2104-42b3-9131-2d54db851bf4" name="Changes by andrea" comment="" />
-    <list id="002399dd-c510-41a0-ba22-dc8f3d6d94cb" name="Changes by Hantamil" comment="">
+    <list id="002399dd-c510-41a0-ba22-dc8f3d6d94cb" name="Changes by Hantamil" comment="Changes by Hantamil">
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" afterDir="false" />
     </list>
-    <list id="7730da23-a191-4aa4-ac6f-6500dcdc18c5" name="Changes by julie" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/FileHandler.java" afterDir="false" />
+    <list id="7730da23-a191-4aa4-ac6f-6500dcdc18c5" name="Changes by julie" comment="Changes by julie">
       <change beforePath="$PROJECT_DIR$/src/main/java/domainmodel/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainmodel/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superhero.csv" beforeDir="false" afterPath="$PROJECT_DIR$/superhero.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domainmodel/Superhero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainmodel/Superhero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,34 +39,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/domainmodel/Superhero.java">
+      <ranges>
+        <range start1="64" end1="64" start2="64" end2="69" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
+        <range start1="65" end1="66" start2="70" end2="70" changelist="7730da23-a191-4aa4-ac6f-6500dcdc18c5" />
+      </ranges>
+    </file>
     <file path="$PROJECT_DIR$/src/main/java/domainmodel/Database.java">
       <ranges>
-        <range start1="5" end1="5" start2="5" end2="6" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="7" end1="8" start2="8" end2="8" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="14" end1="14" start2="14" end2="15" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="16" end1="16" start2="17" end2="20" changelist="7730da23-a191-4aa4-ac6f-6500dcdc18c5" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/datasource/FileHandler.java">
-      <ranges>
-        <range start1="8" end1="9" start2="8" end2="9" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="10" end1="11" start2="10" end2="11" changelist="7730da23-a191-4aa4-ac6f-6500dcdc18c5" />
-        <range start1="15" end1="16" start2="15" end2="15" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/ui/UserInterface.java">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="34" end1="34" start2="35" end2="36" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="112" end1="113" start2="114" end2="115" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="155" end1="155" start2="157" end2="161" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/superhero.txt">
-      <ranges>
-        <range start1="0" end1="1" start2="0" end2="0" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="2" end1="3" start2="1" end2="2" changelist="7730da23-a191-4aa4-ac6f-6500dcdc18c5" />
-        <range start1="6" end1="6" start2="5" end2="7" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
+        <range start1="9" end1="10" start2="9" end2="9" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
+        <range start1="16" end1="19" start2="15" end2="15" changelist="7730da23-a191-4aa4-ac6f-6500dcdc18c5" />
+        <range start1="55" end1="55" start2="51" end2="85" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
       </ranges>
     </file>
   </component>
@@ -133,7 +115,7 @@
       <updated>1698672292877</updated>
       <workItem from="1698672293919" duration="6733000" />
       <workItem from="1699271820536" duration="7017000" />
-      <workItem from="1699356698432" duration="6644000" />
+      <workItem from="1699356698432" duration="11172000" />
     </task>
     <task id="LOCAL-00001" summary="Superhero1.2 transfer">
       <option name="closed" value="true" />
@@ -167,7 +149,31 @@
       <option name="project" value="LOCAL" />
       <updated>1698763159265</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="User Story 11 + 12">
+      <option name="closed" value="true" />
+      <created>1699363369853</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699363369853</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Changes by Hantamil">
+      <option name="closed" value="true" />
+      <created>1699363384871</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1699363384871</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changes by julie">
+      <option name="closed" value="true" />
+      <created>1699363390771</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1699363390771</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +183,10 @@
     <MESSAGE value="Superhero1.2 transfer" />
     <MESSAGE value="refractoring" />
     <MESSAGE value="refractoring + note ift filer" />
-    <option name="LAST_COMMIT_MESSAGE" value="refractoring + note ift filer" />
+    <MESSAGE value="Changes by Hantamil" />
+    <MESSAGE value="User Story 11 + 12" />
+    <MESSAGE value="Changes by julie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by julie" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

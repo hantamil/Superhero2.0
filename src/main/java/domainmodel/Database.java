@@ -7,7 +7,6 @@ import java.util.Collections;
 
 public class Database {
     FileHandler fh = new FileHandler();
-
     private ArrayList<Superhero> superheroList;
 
     public Database() {
@@ -52,6 +51,37 @@ public class Database {
                 return;
             }
         }
+    }
+
+    public String sortBy(String attributesSort) {
+        switch (attributesSort) {
+            case "Superhero name", "superheroname", "superhero":
+                Collections.sort(superheroList, new ComparatorSuperHeroName());
+                /*for (Superhero superhero : superheroList) {
+                    if (superhero.getSuperheroName().contains(superhero.getSuperheroName())) {
+                        System.out.println(superheroList);
+                    }
+                }*/
+                System.out.println(superheroList);
+                break;
+            case "First name":
+                Collections.sort(superheroList, new ComparatorFirstName());
+                System.out.println(superheroList);
+                break;
+            case "Last name":
+                Collections.sort(superheroList, new ComparatorLastName());
+                System.out.println(superheroList);
+                break;
+            case "Abilities":
+                Collections.sort(superheroList, new ComparatorAbilities());
+                System.out.println(superheroList);
+                break;
+            case "Species":
+                Collections.sort(superheroList, new ComparatorSpecies());
+                System.out.println(superheroList);
+                break;
+        }
+       return null;
     }
 
     public ArrayList<Superhero> getAll(){

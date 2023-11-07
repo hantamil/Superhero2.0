@@ -62,4 +62,9 @@ public class Superhero implements Comparable<Superhero> {
     public int compareTo(Superhero otherSuperheroName) {
         return superheroName.compareTo(otherSuperheroName.superheroName);
     }
+
+    @Override
+    public String toString() {
+        return superheroName;
+    }
 }

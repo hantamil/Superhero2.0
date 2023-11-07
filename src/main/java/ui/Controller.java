@@ -29,6 +29,9 @@ public class Controller {
         return database.findSuperhero(superheroName);
     }
 
+    public String getSortBy(String attributesSort) {
+        return database.sortBy(attributesSort);
+    }
 
 
 }
