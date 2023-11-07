@@ -14,9 +14,6 @@ public class Database {
         Collections.sort(superheroList);
     }
 
-// TODO Fikse arraylist, plads 0 kommer ikke op når man kører program 2?
-
-
     public void addSuperhero(String superheroName, String firstName, String lastName, String abilities, String species) {
         Superhero superhero = new Superhero(superheroName, firstName, lastName, abilities, species);
         superheroList.add(superhero);
