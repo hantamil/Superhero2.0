@@ -78,7 +78,6 @@ public class UserInterface {
                     break;
 
                         //TODO Search for Superheroes, virker
-
                 case 3:
 
                     System.out.println("Enter the superhero name");
@@ -157,6 +156,7 @@ public class UserInterface {
                         System.out.println("The superhero " + superheroName + " have been deleted from your library.");
                     }
                     break;
+
                 // TODO View sorted
                 case 6:
                     System.out.println("Which attribute do you want to search for: ");
@@ -175,15 +175,26 @@ public class UserInterface {
                     }
                     break;
 
+                    // TODO View sorted multiple attributes
                 case 7:
-                    System.out.println("Choose two numbers of which the list will be alphabetically sorted by:\n");
+                    System.out.println("Choose two numbers of which the list will be sorted by:\n");
                     System.out.println("1 Superhero name");
                     System.out.println("2 First name");
                     System.out.println("3 Last name");
                     System.out.println("4 Abilities");
                     System.out.println("5 Species");
 
+                    System.out.println("\nChoose the first attribute:");
+                    int attribute1 = keyboard.nextInt();
 
+                    System.out.println("\nChoose the second attribute:");
+                    int attribute2 = keyboard.nextInt();
+
+                    int sortedSuperheroesMultipleAttributes = controller.getSortByMultipleAttributes(attribute1, attribute2);
+
+                    System.out.println("\nSorted list of superheroes by entered attributes: " + sortedSuperheroesMultipleAttributes);
+
+                    break;
 
                         //TODO Afslutter program
                 case 9:

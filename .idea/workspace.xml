@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" name="Changes" comment="User Story 11 + 12">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" name="Changes" comment="user story 14 ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/datasource/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/datasource/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domainmodel/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainmodel/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" afterDir="false" />
     </list>
     <list id="8f282e03-2104-42b3-9131-2d54db851bf4" name="Changes by andrea" comment="" />
-    <list id="002399dd-c510-41a0-ba22-dc8f3d6d94cb" name="Changes by Hantamil" comment="Changes by Hantamil">
-      <change beforePath="$PROJECT_DIR$/src/main/java/domainmodel/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainmodel/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" afterDir="false" />
-    </list>
+    <list id="002399dd-c510-41a0-ba22-dc8f3d6d94cb" name="Changes by Hantamil" comment="Changes by Hantamil" />
     <list id="7730da23-a191-4aa4-ac6f-6500dcdc18c5" name="Changes by julie" comment="Changes by julie" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,52 +27,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/domainmodel/Database.java">
-      <ranges>
-        <range start1="6" end1="6" start2="6" end2="7" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="41" end1="42" start2="42" end2="43" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="43" end1="45" start2="44" end2="46" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="52" end1="55" start2="53" end2="56" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="56" end1="62" start2="57" end2="63" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="63" end1="64" start2="64" end2="65" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="65" end1="66" start2="66" end2="72" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="67" end1="68" start2="73" end2="74" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="69" end1="70" start2="75" end2="81" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="71" end1="72" start2="82" end2="83" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="73" end1="74" start2="84" end2="90" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="75" end1="76" start2="91" end2="92" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="77" end1="78" start2="93" end2="99" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="80" end1="81" start2="101" end2="102" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="82" end1="82" start2="103" end2="105" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/ui/UserInterface.java">
-      <ranges>
-        <range start1="26" end1="27" start2="26" end2="26" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="29" end1="29" start2="28" end2="29" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-        <range start1="76" end1="77" start2="76" end2="77" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="79" end1="82" start2="79" end2="84" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="83" end1="84" start2="85" end2="86" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="85" end1="93" start2="87" end2="95" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="95" end1="99" start2="97" end2="101" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="100" end1="102" start2="102" end2="104" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="103" end1="107" start2="105" end2="109" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="108" end1="111" start2="110" end2="113" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="112" end1="113" start2="114" end2="115" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="114" end1="118" start2="116" end2="120" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="119" end1="123" start2="121" end2="125" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="124" end1="128" start2="126" end2="130" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="129" end1="133" start2="131" end2="135" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="134" end1="142" start2="136" end2="144" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="144" end1="147" start2="146" end2="149" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="148" end1="158" start2="150" end2="159" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="160" end1="161" start2="161" end2="162" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="162" end1="167" start2="163" end2="173" changelist="002399dd-c510-41a0-ba22-dc8f3d6d94cb" />
-        <range start1="173" end1="176" start2="179" end2="185" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -141,6 +91,7 @@
       <workItem from="1698672293919" duration="6733000" />
       <workItem from="1699271820536" duration="7017000" />
       <workItem from="1699356698432" duration="11172000" />
+      <workItem from="1699462230897" duration="6215000" />
     </task>
     <task id="LOCAL-00001" summary="Superhero1.2 transfer">
       <option name="closed" value="true" />
@@ -198,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699363390771</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="user story 14 ui">
+      <option name="closed" value="true" />
+      <created>1699440702983</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699440702983</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +170,8 @@
     <MESSAGE value="Changes by Hantamil" />
     <MESSAGE value="User Story 11 + 12" />
     <MESSAGE value="Changes by julie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by julie" />
+    <MESSAGE value="user story 14 ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="user story 14 ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

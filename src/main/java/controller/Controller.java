@@ -1,10 +1,10 @@
 package controller;
 
 import datasource.FileHandler;
-import domainmodel.Database;
-import domainmodel.Superhero;
+import domainmodel.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Controller {
     private Database database = new Database();
@@ -33,5 +33,7 @@ public class Controller {
         return database.sortBy(attributesSort);
     }
 
-
+    public int getSortByMultipleAttributes(int attribute1, int attribute2){
+        return database.sortByMultipleAttributes(attribute1, attribute2);
+    }
 }
