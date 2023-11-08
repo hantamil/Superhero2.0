@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class FileHandler {
     private final File file = new File("superhero.txt");
 
-   public ArrayList<Superhero> loadData (){
+    public ArrayList<Superhero> loadData (){
         ArrayList<Superhero> superheroList = new ArrayList();
         Scanner sc = null;
         try {

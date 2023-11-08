@@ -39,10 +39,10 @@ public class Database {
         return superheroNames;
     }
 
-    public void deleteSuperhero (String superheroName){
+    public void deleteSuperhero(String superheroName) {
         int foundIndex;
-        for (int superhero = 0; superhero < superheroList.size(); superhero++){
-            if(superheroList.get(superhero).getSuperheroName().equalsIgnoreCase(superheroName)){
+        for (int superhero = 0; superhero < superheroList.size(); superhero++) {
+            if (superheroList.get(superhero).getSuperheroName().equalsIgnoreCase(superheroName)) {
                 foundIndex = superhero;
                 superheroList.remove(foundIndex);
                 return;
@@ -50,36 +50,58 @@ public class Database {
         }
     }
 
-    public String sortBy(String attributesSort) {
-        switch (attributesSort) {
-            case "Superhero name", "superheroname", "superhero":
+    public String sortBy(String attributeSort) {
+        switch (attributeSort.toLowerCase()) {
+            case "superhero name":
                 Collections.sort(superheroList, new ComparatorSuperHeroName());
-                /*for (Superhero superhero : superheroList) {
-                    if (superhero.getSuperheroName().contains(superhero.getSuperheroName())) {
-                        System.out.println(superheroList);
-                    }
-                }*/
-                System.out.println(superheroList);
+                System.out.println("Sorted alphabetically by superhero name:\n");
+                for (Superhero superhero : superheroList) {
+                    String superheroName = superhero.getSuperheroName();
+                    String name = superhero.getSuperheroName();
+                    System.out.println(name + ": " + superheroName);
+                }
                 break;
-            case "First name":
+            case "first name":
                 Collections.sort(superheroList, new ComparatorFirstName());
-                System.out.println(superheroList);
+                System.out.println("Sorted alphabetically by first name:\n");
+                for (Superhero superhero : superheroList) {
+                    String firstName = superhero.getFirstName();
+                    String name = superhero.getSuperheroName();
+                    System.out.println(name + ": " + firstName);
+                }
                 break;
-            case "Last name":
+            case "last name":
                 Collections.sort(superheroList, new ComparatorLastName());
-                System.out.println(superheroList);
+                System.out.println("Sorted alphabetically by last name:\n");
+                for (Superhero superhero : superheroList) {
+                    String lastName = superhero.getLastName();
+                    String name = superhero.getSuperheroName();
+                    System.out.println(name + ": " + lastName);
+                }
                 break;
-            case "Abilities":
+            case "abilities":
                 Collections.sort(superheroList, new ComparatorAbilities());
-                System.out.println(superheroList);
+                System.out.println("Sorted alphabetically by abilities:\n");
+                for (Superhero superhero : superheroList) {
+                    String abilities = superhero.getAbilities();
+                    String name = superhero.getSuperheroName();
+                    System.out.println(name + ": " + abilities);
+                }
                 break;
-            case "Species":
+            case "species":
                 Collections.sort(superheroList, new ComparatorSpecies());
-                System.out.println(superheroList);
+                System.out.println("Sorted alphabetically by species:\n");
+                for (Superhero superhero : superheroList) {
+                    String species = superhero.getSpecies();
+                    String name = superhero.getSuperheroName();
+                    System.out.println(name + ": " + species);
+                }
                 break;
         }
-       return null;
+        return "";
     }
+
+
 
     public ArrayList<Superhero> getAll(){
     return superheroList;

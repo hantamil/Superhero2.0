@@ -24,9 +24,9 @@ public class UserInterface {
         System.out.println("Welcome to the SUPERHERO UNIVERSE!");
         boolean runProgram = true;
 
-        int menuNumber;
 
         while (runProgram) {
+            int menuNumber;
             System.out.println("\nChoose your next step and enter a number:");
             System.out.println("1. Create");
             System.out.println("2. See complete list of superheroes");
@@ -171,9 +171,12 @@ public class UserInterface {
                         //TODO Afslutter program
                 case 9:
                             System.out.println("We hope to see you again soon");
-                    }
-            break;
+                            runProgram = false;
+                    break;
+                default:
+                    runProgram = true;
             }
+        }
         }
     }
 
