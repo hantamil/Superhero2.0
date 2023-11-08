@@ -74,97 +74,103 @@ public class UserInterface {
                                     " Species: " + superhero1.getSpecies());
                     }
                 }
-                        break;
+                    break;
 
                         //TODO Search for Superheroes, virker
-                        case 3:
-                            System.out.println("Enter the superhero name");
-                            superheroName = keyboard.next();
 
-                            ArrayList<String> result = controller.findSuperheroesNames(superheroName);
+                case 3:
 
-                            if (result.isEmpty()){
-                                System.out.println("This superhero does not exist in our library of superheroes.");
-                            } else {
-                                for (String name : result){
-                                    System.out.println(name);
-                                }
-                            }
-                            break;
+                    System.out.println("Enter the superhero name");
+                    superheroName = keyboard.next();
+
+                    ArrayList<String> attributeSearch = controller.findSuperheroesNames(superheroName);
+
+                    if (attributeSearch.isEmpty()){
+                        System.out.println("This superhero does not exist in our library of superheroes.");
+                    } else {
+                        for (String name : attributeSearch){
+                            System.out.println(name);
+                        }
+                    }
+                    break;
 
                         //TODO Edit Superheroes, virker
-                        case 4:
-                            System.out.println("Enter the name of the superhero you would like to edit:");
-                            final String searchSHName = keyboard.nextLine();
-                            ArrayList<Superhero> searchSHN = controller.findSuperhero(searchSHName);
+                case 4:
+                    System.out.println("Enter the name of the superhero you would like to edit:");
+                    final String searchSHName = keyboard.nextLine();
+                    ArrayList<Superhero> searchSHN = controller.findSuperhero(searchSHName);
 
-                            if (!searchSHN.isEmpty()) {
-                                System.out.println("Superheroes have been found.");
+                    if (!searchSHN.isEmpty()) {
+                        System.out.println("Superheroes have been found.");
 
-                                for (int index = 0; index < searchSHN.size(); index++) {
-                                    System.out.println((index + 1) + ". " + searchSHN.get(index).getSuperheroName());
-                                    System.out.println();
-                                }
+                        for (int index = 0; index < searchSHN.size(); index++) {
+                            System.out.println((index + 1) + ". " + searchSHN.get(index).getSuperheroName());
+                            System.out.println();
+                        }
 
-                                System.out.println("Type in number of the superhero you would like to edit:");
-                                int superheroNumber = scanIntWithRetry();
-                                Superhero editSuperhero = searchSHN.get(superheroNumber - 1);
+                        System.out.println("Type in number of the superhero you would like to edit:");
+                        int superheroNumber = scanIntWithRetry();
+                        Superhero editSuperhero = searchSHN.get(superheroNumber - 1);
 
-                                System.out.println("Edit the data and press ENTER. If the data does not require changes, then press ENTER.");
+                        System.out.println("Edit the data and press ENTER. If the data does not require changes, then press ENTER.");
 
-                                System.out.println("Superhero Name: " + editSuperhero.getSuperheroName());
-                                String newSuperheroName = keyboard.nextLine();
-                                if (!newSuperheroName.isEmpty())
-                                    editSuperhero.setSuperheroName(newSuperheroName);
+                        System.out.println("Superhero Name: " + editSuperhero.getSuperheroName());
+                        String newSuperheroName = keyboard.nextLine();
+                        if (!newSuperheroName.isEmpty())
+                            editSuperhero.setSuperheroName(newSuperheroName);
 
-                                System.out.println("First name: " + editSuperhero.getFirstName());
-                                String newFirstName = keyboard.nextLine();
-                                if (!newFirstName.isEmpty())
-                                    editSuperhero.setFirstName(newFirstName);
+                        System.out.println("First name: " + editSuperhero.getFirstName());
+                        String newFirstName = keyboard.nextLine();
+                        if (!newFirstName.isEmpty())
+                            editSuperhero.setFirstName(newFirstName);
 
-                                System.out.println("Last name: " + editSuperhero.getLastName());
-                                String newLastName = keyboard.nextLine();
-                                if (!newLastName.isEmpty())
-                                    editSuperhero.setLastName(newLastName);
+                        System.out.println("Last name: " + editSuperhero.getLastName());
+                        String newLastName = keyboard.nextLine();
+                        if (!newLastName.isEmpty())
+                            editSuperhero.setLastName(newLastName);
 
-                                System.out.println("Abilities: " + editSuperhero.getAbilities());
-                                String newAbilities = keyboard.nextLine();
-                                if (!newAbilities.isEmpty())
-                                    editSuperhero.setAbilities(newAbilities);
+                        System.out.println("Abilities: " + editSuperhero.getAbilities());
+                        String newAbilities = keyboard.nextLine();
+                        if (!newAbilities.isEmpty())
+                            editSuperhero.setAbilities(newAbilities);
 
-                                System.out.println("Type: " + editSuperhero.getSpecies());
-                                String newSpecies = keyboard.nextLine();
-                                if (!newSpecies.isEmpty())
-                                    editSuperhero.setSpecies(newSpecies);
-                            } else {
-                                System.out.println("No results match your search: " + searchSHName);
-                            }
-                            break;
+                        System.out.println("Type: " + editSuperhero.getSpecies());
+                        String newSpecies = keyboard.nextLine();
+                        if (!newSpecies.isEmpty())
+                            editSuperhero.setSpecies(newSpecies);
+                    } else {
+                        System.out.println("No results match your search: " + searchSHName);
+                    }
+                    break;
 
                         //TODO Delete Superheroes
-                        case 5:
-                            System.out.println("Enter the superhero you want to delete: ");
-                            superheroName = keyboard.next();
+                case 5:
+                    System.out.println("Enter the superhero you want to delete: ");
+                    superheroName = keyboard.next();
 
-                            ArrayList<Superhero> superheroDelete = controller.findSuperhero(superheroName);
-                            if (superheroDelete.isEmpty()) {
-                                System.out.println("This superhero does not exits in our database");
-
-                            } else {
-                                controller.deleteSuperhero(superheroName);
-                                System.out.println("The superhero " + superheroName + " have been deleted from your library.");
-                            }
-                            break;
-
+                    ArrayList<Superhero> superheroDelete = controller.findSuperhero(superheroName);
+                    if (superheroDelete.isEmpty()) {
+                        System.out.println("This superhero does not exits in our database");
+                    } else {
+                        controller.deleteSuperhero(superheroName);
+                        System.out.println("The superhero " + superheroName + " have been deleted from your library.");
+                    }
+                    break;
+                // TODO View sorted
                 case 6:
                     System.out.println("Which attribute do you want to search for: ");
-                    String attributeSort = keyboard.nextLine();
+                    String attributeSort = keyboard.nextLine().toLowerCase();
 
-                    if (attributeSort.isEmpty()){
-                        System.out.println("Not a parameter.");
-                    }
-                    else {
-                        controller.getSortBy(attributeSort);
+                    if (attributeSort.equalsIgnoreCase("superhero name") || attributeSort.equalsIgnoreCase("first name") || attributeSort.equalsIgnoreCase("last name") || attributeSort.equalsIgnoreCase("abilities") || attributeSort.equalsIgnoreCase("species")) {
+                        String sortedSuperheroes = controller.getSortBy(attributeSort);
+
+                        if ("Invalid attribute for sorting.".equals(sortedSuperheroes)) {
+                            System.out.println(sortedSuperheroes);
+                        } else {
+                            System.out.println(sortedSuperheroes);
+                        }
+                    } else {
+                        System.out.println("Invalid attribute for sorting.");
                     }
                     break;
 
