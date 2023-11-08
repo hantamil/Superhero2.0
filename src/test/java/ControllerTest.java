@@ -1,9 +1,5 @@
-import domainmodel.Database;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import ui.Controller;
-
-import java.util.ArrayList;
+import controller.Controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

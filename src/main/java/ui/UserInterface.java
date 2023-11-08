@@ -1,7 +1,7 @@
 package ui;
+import controller.Controller;
 import domainmodel.Superhero;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 import java.lang.String;
 

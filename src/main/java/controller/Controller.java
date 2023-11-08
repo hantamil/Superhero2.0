@@ -1,4 +1,4 @@
-package ui;
+package controller;
 
 import datasource.FileHandler;
 import domainmodel.Database;
