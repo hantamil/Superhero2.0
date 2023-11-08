@@ -33,7 +33,8 @@ public class UserInterface {
             System.out.println("3. Search for superhero");
             System.out.println("4. Edit superhero");
             System.out.println("5. Delete superhero");
-            System.out.println("6. See complete list of superheroes sorted");
+            System.out.println("6. See complete list of superheroes sorted by an attribute");
+            System.out.println("7. See complete list of superheroes sorted by multiple attributes");
             System.out.println("9. Close");
 
             menuNumber = scanIntWithRetry();
@@ -173,6 +174,16 @@ public class UserInterface {
                         System.out.println("Invalid attribute for sorting.");
                     }
                     break;
+
+                case 7:
+                    System.out.println("Choose two numbers of which the list will be alphabetically sorted by:\n");
+                    System.out.println("1 Superhero name");
+                    System.out.println("2 First name");
+                    System.out.println("3 Last name");
+                    System.out.println("4 Abilities");
+                    System.out.println("5 Species");
+
+
 
                         //TODO Afslutter program
                 case 9:
