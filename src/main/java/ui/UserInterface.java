@@ -35,7 +35,7 @@ public class UserInterface {
             System.out.println("5. Delete superhero");
             System.out.println("6. See complete list of superheroes sorted by an attribute");
             System.out.println("7. See complete list of superheroes sorted by multiple attributes");
-            System.out.println("9. Close");
+            System.out.println("8. Close");
 
             menuNumber = scanIntWithRetry();
 
@@ -83,12 +83,12 @@ public class UserInterface {
                     System.out.println("Enter the superhero name");
                     superheroName = keyboard.next();
 
-                    ArrayList<String> attributeSearch = controller.findSuperheroesNames(superheroName);
+                    ArrayList<Superhero> attributeSearch = controller.findSuperhero(superheroName);
 
                     if (attributeSearch.isEmpty()){
                         System.out.println("This superhero does not exist in our library of superheroes.");
                     } else {
-                        for (String name : attributeSearch){
+                        for (Superhero name : attributeSearch){
                             System.out.println(name);
                         }
                     }
@@ -153,8 +153,8 @@ public class UserInterface {
                         System.out.println("This superhero does not exits in our database");
                     } else {
                         controller.deleteSuperhero(superheroName);
-                        System.out.println("The superhero " + superheroName + " have been deleted from your library.");
                     }
+
                     break;
 
                 // TODO View sorted
@@ -185,22 +185,22 @@ public class UserInterface {
                     System.out.println("5 Species");
 
                     System.out.println("\nChoose the first attribute:");
-                    int attribute1 = keyboard.nextInt();
+                    String attribute1 = keyboard.nextLine().toLowerCase();
 
                     System.out.println("\nChoose the second attribute:");
-                    int attribute2 = keyboard.nextInt();
+                    String attribute2 = keyboard.nextLine().toLowerCase();
 
-                    int sortedSuperheroesMultipleAttributes = controller.getSortByMultipleAttributes(attribute1, attribute2);
 
-                    System.out.println("\nSorted list of superheroes by entered attributes: " + sortedSuperheroesMultipleAttributes);
+                    System.out.println(controller.getSortByMultipleAttributes(attribute1, attribute2));
 
                     break;
 
                         //TODO Afslutter program
-                case 9:
+                case 8:
                             System.out.println("We hope to see you again soon");
                             runProgram = false;
                     break;
+
                 default:
                     runProgram = true;
             }

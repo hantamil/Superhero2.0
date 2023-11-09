@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" name="Changes" comment="user story 14 ui">
+    <list default="true" id="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" name="Changes" comment="user story 14">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domainmodel/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainmodel/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ControllerTest.java" beforeDir="false" />
+    </list>
+    <list id="eb1a26db-693c-49b0-bd7e-7acb9eddeff3" name="Changes by andre" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/domainmodel/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domainmodel/Database.java" afterDir="false" />
     </list>
     <list id="8f282e03-2104-42b3-9131-2d54db851bf4" name="Changes by andrea" comment="" />
     <list id="002399dd-c510-41a0-ba22-dc8f3d6d94cb" name="Changes by Hantamil" comment="Changes by Hantamil" />
@@ -27,6 +32,21 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/domainmodel/Database.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="6" changelist="eb1a26db-693c-49b0-bd7e-7acb9eddeff3" />
+        <range start1="32" end1="41" start2="33" end2="33" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
+        <range start1="43" end1="49" start2="35" end2="42" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
+        <range start1="51" end1="51" start2="44" end2="50" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
+        <range start1="108" end1="116" start2="107" end2="114" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
+        <range start1="117" end1="133" start2="115" end2="138" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
+        <range start1="135" end1="155" start2="140" end2="170" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
+        <range start1="156" end1="158" start2="171" end2="172" changelist="5e3bc2c8-5e9b-4066-97b1-04a8b3f9f555" />
+        <range start1="159" end1="159" start2="173" end2="175" changelist="eb1a26db-693c-49b0-bd7e-7acb9eddeff3" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -60,7 +80,7 @@
       <recent name="C:\Users\Hantamil\IdeaProjects\Superhero2.0" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="domainmodel.Main" />
       <module name="Superhero2.0" />
@@ -74,9 +94,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DatabaseTest.testAddSuperhero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Superhero2.0" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DatabaseTest" />
+      <option name="METHOD_NAME" value="testAddSuperhero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.DatabaseTest.testAddSuperhero" />
       </list>
     </recent_temporary>
   </component>
@@ -91,7 +122,8 @@
       <workItem from="1698672293919" duration="6733000" />
       <workItem from="1699271820536" duration="7017000" />
       <workItem from="1699356698432" duration="11172000" />
-      <workItem from="1699462230897" duration="6215000" />
+      <workItem from="1699462230897" duration="6574000" />
+      <workItem from="1699518165897" duration="9687000" />
     </task>
     <task id="LOCAL-00001" summary="Superhero1.2 transfer">
       <option name="closed" value="true" />
@@ -157,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699440702983</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="user story 14">
+      <option name="closed" value="true" />
+      <created>1699468523360</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699468523360</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +211,8 @@
     <MESSAGE value="User Story 11 + 12" />
     <MESSAGE value="Changes by julie" />
     <MESSAGE value="user story 14 ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="user story 14 ui" />
+    <MESSAGE value="user story 14" />
+    <option name="LAST_COMMIT_MESSAGE" value="user story 14" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

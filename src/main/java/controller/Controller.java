@@ -17,10 +17,6 @@ public class Controller {
         return database.getAll();
     }
 
-    public ArrayList<String> findSuperheroesNames(String superheroName) {
-        return database.findSuperheroesNames(superheroName);
-    }
-
     public void deleteSuperhero (String superheroName){
         database.deleteSuperhero(superheroName);
     }
@@ -33,7 +29,7 @@ public class Controller {
         return database.sortBy(attributesSort);
     }
 
-    public int getSortByMultipleAttributes(int attribute1, int attribute2){
+    public String getSortByMultipleAttributes(String attribute1, String attribute2){
         return database.sortByMultipleAttributes(attribute1, attribute2);
     }
 }
