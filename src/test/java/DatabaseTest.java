@@ -22,11 +22,10 @@ public class DatabaseTest {
     }
 
     @Test
-    void testDELETE_SUPERHERO() {
-        //Arrange
-        
-        //Act
-        //Assert
+    void testDELETE_SUPERHERO () {
+        int expected = 5;
+        superheroes.deleteSuperhero("Superman");
+        assertEquals(expected, superheroes.getAll().size());
     }
 
-}
+    }

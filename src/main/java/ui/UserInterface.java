@@ -1,12 +1,18 @@
 package ui;
+
 import controller.Controller;
 import domainmodel.Superhero;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.lang.String;
 
 public class UserInterface {
-    public static final String BLUE_BOLD = "\033[1;34m";
+    public static final String CYAN = "\033[0;36m";
+    public static final String CYAN_BOLD = "\033[1;36m";
+    public static final String RESET = "\033[0m";
+    public static final String BLACK_BOLD = "\033[1;30m";
+    public static final Font BIGGER_FONT = new Font("serif", Font.PLAIN, 24);
+    //public static final Font FONT_RESET = new Font("serif", Font.PLAIN, RESET);
+
 
     private int scanIntWithRetry() {
         Scanner scanner = new Scanner(System.in);
@@ -21,120 +27,122 @@ public class UserInterface {
         Controller controller = new Controller();
         Scanner keyboard = new Scanner(System.in);
 
-        System.out.println("Welcome to the SUPERHERO UNIVERSE!");
+        System.out.println(CYAN_BOLD + "\nWelcome to the SUPERHERO UNIVERSE!" + RESET);
         boolean runProgram = true;
-
 
         while (runProgram) {
             int menuNumber;
-            System.out.println("\nChoose your next step and enter a number:");
-            System.out.println("1. Create");
-            System.out.println("2. See complete list of superheroes");
-            System.out.println("3. Search for superhero");
-            System.out.println("4. Edit superhero");
-            System.out.println("5. Delete superhero");
-            System.out.println("6. See complete list of superheroes sorted by an attribute");
-            System.out.println("7. See complete list of superheroes sorted by multiple attributes");
-            System.out.println("8. Close");
+
+            System.out.println(CYAN + "\u2501".repeat(80) + RESET);
+            System.out.println("Choose your next step and enter a number:");
+            System.out.println("1. " + CYAN + "Create" + RESET);
+            System.out.println("2. " + CYAN + "See complete list of superheroes" + RESET);
+            System.out.println("3. " + CYAN + "Search for superhero" + RESET);
+            System.out.println("4. " + CYAN + "Edit superhero" + RESET);
+            System.out.println("5. " + CYAN + "Delete superhero" + RESET);
+            System.out.println("6. " + CYAN + "See complete list of superheroes sorted by an attribute" + RESET);
+            System.out.println("7. " + CYAN + "See complete list of superheroes sorted by multiple attributes" + RESET);
+            System.out.println("8. " + CYAN + "Close" + RESET);
+            System.out.println(CYAN + "\u2501".repeat(80) + RESET);
 
             menuNumber = scanIntWithRetry();
 
             switch (menuNumber) {
                 //TODO Create, virker
                 case 1:
-                    System.out.println("Enter the superhero name: ");
+                    System.out.println("\nEnter the superhero details:");
+                    System.out.print("Superhero name: ");
                     String superheroName = keyboard.next();
-                    System.out.println("Enter the superhero's legal name (first and last): ");
+                    System.out.print("Legal name (first and last): ");
                     String firstName = keyboard.next();
                     String lastName = keyboard.next();
-                    System.out.println("Enter superpower: ");
+                    System.out.print("Superpower: ");
                     String abilities = keyboard.next();
-                    System.out.println("Enter which kind of creature the superhero is: ");
+                    System.out.print("Type of creature: ");
                     String species = keyboard.next();
-                    System.out.println("The superhero you have added: " +
-                            superheroName + " " +
-                            firstName + lastName + " " +
-                            abilities + " " + species);
-                    keyboard.nextLine();
+                    System.out.println("\nThe superhero you have added:");
+                    System.out.println(CYAN + " Superhero: " + superheroName + RESET);
+                    System.out.println(" Name: " + firstName + " " + lastName);
+                    System.out.println(" Abilities: " + abilities);
+                    System.out.println(" Species: " + species);
 
+                    keyboard.nextLine();
                     controller.addSuperhero(superheroName, firstName, lastName, abilities, species);
                     break;
 
                 //TODO See complete list of Superheroes, virker
                 case 2:
                     if (controller.getSuperheroList().isEmpty()) {
-                        System.out.println("No superhero found");
+                        System.out.println("No superheroes found");
                     } else {
-                        System.out.println("Complete list of superheroes:");
-                    for (Superhero superhero1 : controller.getSuperheroList()) {
-                        if (superhero1 != null)
-                            System.out.println(BLUE_BOLD + " Superhero: " + superhero1.getSuperheroName() +
-                                    "\u001B[0m" + "\n" +
-                                    " Name: " + superhero1.getFirstName() + " " + superhero1.getLastName() + "\n" +
-                                    " Abilities: " + superhero1.getAbilities() + "\n" +
-                                    " Species: " + superhero1.getSpecies());
+                        System.out.println("\nComplete list of superheroes:");
+                        for (Superhero superhero1 : controller.getSuperheroList()) {
+                            if (superhero1 != null)
+                                System.out.println(CYAN + "\n Superhero: " + superhero1.getSuperheroName() + RESET +
+                                        "\n Name: " + superhero1.getFirstName() + " " + superhero1.getLastName() +
+                                        "\n Abilities: " + superhero1.getAbilities() +
+                                        "\n Species: " + superhero1.getSpecies());
+                        }
                     }
-                }
                     break;
 
-                        //TODO Search for Superheroes, virker
+                //TODO Search for Superheroes, virker
                 case 3:
-
-                    System.out.println("Enter the superhero name");
+                    System.out.print("\nEnter the superhero name: ");
                     superheroName = keyboard.next();
 
                     ArrayList<Superhero> attributeSearch = controller.findSuperhero(superheroName);
 
-                    if (attributeSearch.isEmpty()){
+                    if (attributeSearch.isEmpty()) {
                         System.out.println("This superhero does not exist in our library of superheroes.");
                     } else {
-                        for (Superhero name : attributeSearch){
-                            System.out.println(name);
+                        System.out.println("\nSuperheroes found with the name " + CYAN + superheroName + RESET + ":");
+                        for (Superhero name : attributeSearch) {
+                            System.out.println(CYAN + " - " + name.getSuperheroName() + RESET);
                         }
                     }
                     break;
 
-                        //TODO Edit Superheroes, virker
+                //TODO Edit Superheroes, virker
                 case 4:
-                    System.out.println("Enter the name of the superhero you would like to edit:");
+                    System.out.print("\nEnter the name of the superhero you would like to edit: ");
                     final String searchSHName = keyboard.nextLine();
                     ArrayList<Superhero> searchSHN = controller.findSuperhero(searchSHName);
 
                     if (!searchSHN.isEmpty()) {
-                        System.out.println("Superheroes have been found.");
+                        System.out.println("\nSuperheroes found with the name " + CYAN + searchSHName + RESET + ":");
 
                         for (int index = 0; index < searchSHN.size(); index++) {
-                            System.out.println((index + 1) + ". " + searchSHN.get(index).getSuperheroName());
-                            System.out.println();
+                            System.out.println(CYAN + " " + (index + 1) + ". " + searchSHN.get(index).getSuperheroName() + RESET);
                         }
 
-                        System.out.println("Type in number of the superhero you would like to edit:");
+                        System.out.print("Type in the number of the superhero you would like to edit: ");
                         int superheroNumber = scanIntWithRetry();
                         Superhero editSuperhero = searchSHN.get(superheroNumber - 1);
 
-                        System.out.println("Edit the data and press ENTER. If the data does not require changes, then press ENTER.");
+                        System.out.println("\nEdit the data and press ENTER. If the data does not require changes, press ENTER.");
 
-                        System.out.println("Superhero Name: " + editSuperhero.getSuperheroName());
+                        System.out.print("Superhero Name: " + editSuperhero.getSuperheroName() + " -> ");
                         String newSuperheroName = keyboard.nextLine();
                         if (!newSuperheroName.isEmpty())
                             editSuperhero.setSuperheroName(newSuperheroName);
 
-                        System.out.println("First name: " + editSuperhero.getFirstName());
+                        System.out.print("First name: " + editSuperhero.getFirstName() + " -> ");
                         String newFirstName = keyboard.nextLine();
                         if (!newFirstName.isEmpty())
                             editSuperhero.setFirstName(newFirstName);
 
-                        System.out.println("Last name: " + editSuperhero.getLastName());
+                        System.out.print("Last name: " + editSuperhero.getLastName() + " -> ");
                         String newLastName = keyboard.nextLine();
                         if (!newLastName.isEmpty())
                             editSuperhero.setLastName(newLastName);
 
-                        System.out.println("Abilities: " + editSuperhero.getAbilities());
+                        System.out.print("Abilities: " + editSuperhero.getAbilities() + " -> ");
                         String newAbilities = keyboard.nextLine();
                         if (!newAbilities.isEmpty())
                             editSuperhero.setAbilities(newAbilities);
 
-                        System.out.println("Type: " + editSuperhero.getSpecies());
+                        System.out.print("Species: " + editSuperhero.getSpecies() + " -> ");
                         String newSpecies = keyboard.nextLine();
                         if (!newSpecies.isEmpty())
                             editSuperhero.setSpecies(newSpecies);
@@ -143,14 +151,14 @@ public class UserInterface {
                     }
                     break;
 
-                        //TODO Delete Superheroes
+                //TODO Delete Superheroes
                 case 5:
-                    System.out.println("Enter the superhero you want to delete: ");
+                    System.out.print("\nEnter the superhero you want to delete: ");
                     superheroName = keyboard.next();
 
                     ArrayList<Superhero> superheroDelete = controller.findSuperhero(superheroName);
                     if (superheroDelete.isEmpty()) {
-                        System.out.println("This superhero does not exits in our database");
+                        System.out.println("This superhero does not exist in our database");
                     } else {
                         controller.deleteSuperhero(superheroName);
                     }
@@ -159,7 +167,7 @@ public class UserInterface {
 
                 // TODO View sorted
                 case 6:
-                    System.out.println("Which attribute do you want to search for: ");
+                    System.out.print("\nWhich attribute do you want to sort by: ");
                     String attributeSort = keyboard.nextLine().toLowerCase();
 
                     if (attributeSort.equalsIgnoreCase("superhero name") || attributeSort.equalsIgnoreCase("first name") || attributeSort.equalsIgnoreCase("last name") || attributeSort.equalsIgnoreCase("abilities") || attributeSort.equalsIgnoreCase("species")) {
@@ -168,44 +176,40 @@ public class UserInterface {
                         if ("Invalid attribute for sorting.".equals(sortedSuperheroes)) {
                             System.out.println(sortedSuperheroes);
                         } else {
-                            System.out.println(sortedSuperheroes);
+                            System.out.println("\n" + sortedSuperheroes);
                         }
                     } else {
                         System.out.println("Invalid attribute for sorting.");
                     }
                     break;
 
-                    // TODO View sorted multiple attributes
+                // TODO View sorted multiple attributes
                 case 7:
-                    System.out.println("Choose two numbers of which the list will be sorted by:\n");
-                    System.out.println("1 Superhero name");
-                    System.out.println("2 First name");
-                    System.out.println("3 Last name");
-                    System.out.println("4 Abilities");
-                    System.out.println("5 Species");
+                    System.out.println("\nChoose two numbers for the list to be sorted by:");
+                    System.out.println("1. Superhero name");
+                    System.out.println("2. First name");
+                    System.out.println("3. Last name");
+                    System.out.println("4. Abilities");
+                    System.out.println("5. Species");
 
-                    System.out.println("\nChoose the first attribute:");
+                    System.out.print("\nChoose the first attribute: ");
                     String attribute1 = keyboard.nextLine().toLowerCase();
 
-                    System.out.println("\nChoose the second attribute:");
+                    System.out.print("\nChoose the second attribute: ");
                     String attribute2 = keyboard.nextLine().toLowerCase();
 
-
                     System.out.println(controller.getSortByMultipleAttributes(attribute1, attribute2));
-
                     break;
 
-                        //TODO Afslutter program
+                //TODO Afslutter program
                 case 8:
-                            System.out.println("We hope to see you again soon");
-                            runProgram = false;
+                    System.out.println(BLACK_BOLD + "We hope to see you again soon" + RESET);
+                    runProgram = false;
                     break;
 
                 default:
                     runProgram = true;
             }
         }
-        }
     }
-
-
+}

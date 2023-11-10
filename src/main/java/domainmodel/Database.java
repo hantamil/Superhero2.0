@@ -3,7 +3,6 @@ package domainmodel;
 import datasource.FileHandler;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -44,7 +43,7 @@ public class Database {
         }
         if (superheroToDelete != null) {
             superheroList.remove(superheroToDelete);
-            System.out.println(superheroName + " has been deleted from your library.");
+            System.out.println(superheroName + " has been " + "\u001B[31m" + "deleted" + "\u001B[0m" + " from your library.");
         } else {
             System.out.println(superheroName + " does not exist in our database. No deletion performed.");
         }
@@ -101,37 +100,37 @@ public class Database {
         return "";
     }
 
-    public ArrayList<Superhero> getAll(){
-    return superheroList;
+    public ArrayList<Superhero> getAll() {
+        return superheroList;
     }
 
     public String sortByMultipleAttributes(String attribute1, String attribute2) {
         System.out.println("Sorted by first attribute:");
-        switch (attribute1){
+        switch (attribute1) {
             case "2":
                 Collections.sort(superheroList, new ComparatorFirstName());
                 for (Superhero superhero : superheroList) {
                     System.out.println("\nSuperhero name: " + superhero.getSuperheroName());
-                System.out.println("First name: " + superhero.getFirstName());
+                    System.out.println("First name: " + superhero.getFirstName());
                 }
                 break;
             case "3":
                 Collections.sort(superheroList, new ComparatorLastName());
-                for (Superhero superhero : superheroList){
+                for (Superhero superhero : superheroList) {
                     System.out.println("\nSuperhero name: " + superhero.getSuperheroName());
                     System.out.println("Last name: " + superhero.getLastName());
                 }
                 break;
             case "4":
                 Collections.sort(superheroList, new ComparatorAbilities());
-                for (Superhero superhero : superheroList){
+                for (Superhero superhero : superheroList) {
                     System.out.println("\nSuperhero name: " + superhero.getSuperheroName());
                     System.out.println("Abilities: " + superhero.getAbilities());
                 }
                 break;
             case "5":
                 Collections.sort(superheroList, new ComparatorSpecies());
-                for (Superhero superhero : superheroList){
+                for (Superhero superhero : superheroList) {
                     System.out.println("\nSuperhero name: " + superhero.getSuperheroName());
                     System.out.println("Species: " + superhero.getSpecies());
                 }
@@ -139,31 +138,31 @@ public class Database {
         }
 
         System.out.println("\nSorted by second attribute:");
-        switch (attribute2){
+        switch (attribute2) {
             case "2":
                 Collections.sort(superheroList, new ComparatorFirstName());
-                for (Superhero superhero : superheroList){
+                for (Superhero superhero : superheroList) {
                     System.out.println("\nSuperhero name: " + superhero.getSuperheroName());
                     System.out.println("First name: " + superhero.getFirstName());
                 }
                 break;
             case "3":
                 Collections.sort(superheroList, new ComparatorLastName());
-                for (Superhero superhero : superheroList){
+                for (Superhero superhero : superheroList) {
                     System.out.println("\nSuperhero name: " + superhero.getSuperheroName());
                     System.out.println("Last name: " + superhero.getLastName());
                 }
                 break;
             case "4":
                 Collections.sort(superheroList, new ComparatorAbilities());
-                for (Superhero superhero : superheroList){
+                for (Superhero superhero : superheroList) {
                     System.out.println("\nSuperhero name: " + superhero.getSuperheroName());
                     System.out.println("Abilities: " + superhero.getAbilities());
                 }
                 break;
             case "5":
                 Collections.sort(superheroList, new ComparatorSpecies());
-                for (Superhero superhero : superheroList){
+                for (Superhero superhero : superheroList) {
                     System.out.println("\nSuperhero name: " + superhero.getSuperheroName());
                     System.out.println("Species: " + superhero.getSpecies());
                 }
@@ -171,6 +170,4 @@ public class Database {
         }
         return "";
     }
-
-
 }
