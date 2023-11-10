@@ -2,6 +2,9 @@ package ui;
 
 import controller.Controller;
 import domainmodel.Superhero;
+
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
