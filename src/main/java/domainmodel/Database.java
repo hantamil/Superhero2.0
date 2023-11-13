@@ -1,10 +1,10 @@
 package domainmodel;
 
 import datasource.FileHandler;
+import domainmodel.comparators.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Scanner;
 
 public class Database {
     FileHandler fh = new FileHandler();

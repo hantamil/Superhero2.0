@@ -1,10 +1,6 @@
 package ui;
-
 import controller.Controller;
 import domainmodel.Superhero;
-
-import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,8 +9,6 @@ public class UserInterface {
     public static final String CYAN_BOLD = "\033[1;36m";
     public static final String RESET = "\033[0m";
     public static final String BLACK_BOLD = "\033[1;30m";
-    public static final Font BIGGER_FONT = new Font("serif", Font.PLAIN, 24);
-    //public static final Font FONT_RESET = new Font("serif", Font.PLAIN, RESET);
 
 
     private int scanIntWithRetry() {

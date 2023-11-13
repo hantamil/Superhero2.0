@@ -1,4 +1,6 @@
-package domainmodel;
+package domainmodel.comparators;
+
+import domainmodel.Superhero;
 
 import java.util.Comparator;
 
